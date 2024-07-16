@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# UI 파일에서 텍스트 추출
+intltool-extract --type=gettext/glade ../data/piwiz.ui
+
+# 소스 코드와 추출된 UI 헤더 파일에서 POT 파일 생성
+xgettext --keyword=_ --keyword=N_ --output=piwiz.pot ../src/piwiz.c ../data/piwiz.ui.h
+
+# 새 POT 파일의 경로
+POT_FILE="piwiz.pot"
+
+# PO 파일이 있는 디렉토리 경로
+PO_DIR="./"
+
+# 디렉토리 내 모든 PO 파일을 순회하며 업데이트
+for po_file in "$PO_DIR"/*.po; do
+  echo "Updating $po_file..."
+  msgmerge --update "$po_file" "$POT_FILE"
+done
+
+rm -f ../data/piwiz.ui.h
+
+echo "All PO files have been updated."

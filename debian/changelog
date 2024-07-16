@@ -1,0 +1,455 @@
+piwiz (1.0.0) bookworm; urgency=medium
+
+  * Release for HamoniKR
+
+ -- Kevin Kim <chaeya@gmail.com>  Tue, 16 Jul 2024 19:11:42 +0900
+
+piwiz (0.74) bookworm; urgency=medium
+
+  * Translation update
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 16 Jul 2024 07:50:23 +0100
+
+piwiz (0.73) bookworm; urgency=medium
+
+  * Reinstate RPC page on 32-bit and X
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 24 Jun 2024 12:52:26 +0100
+
+piwiz (0.72) bookworm; urgency=medium
+
+  * Hide RPC page on 32-bit systems
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 18 Jun 2024 14:16:11 +0100
+
+piwiz (0.71) bookworm; urgency=medium
+
+  * Fix skip on update page
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 17 Jun 2024 08:57:36 +0100
+
+piwiz (0.70) bookworm; urgency=medium
+
+  * Tweaks to PackageKit messages
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 31 May 2024 08:47:02 +0100
+
+piwiz (0.69) bookworm; urgency=medium
+
+  * Add Raspberry Pi Connect page
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 21 May 2024 09:32:19 +0100
+
+piwiz (0.68) bookworm; urgency=medium
+
+  * For first init of timezone, always use the default for the zone
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 18 Mar 2024 10:25:08 +0000
+
+piwiz (0.67) bookworm; urgency=medium
+
+  * Modify for labwc
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 15 Jan 2024 08:33:30 +0000
+
+piwiz (0.66) bookworm; urgency=medium
+
+  * Handle uninstall of packages during update
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 10 Nov 2023 16:05:58 +0000
+
+piwiz (0.65) bookworm; urgency=medium
+
+  * Fix setting of character set
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 30 Oct 2023 07:54:35 +0000
+
+piwiz (0.64) bookworm; urgency=medium
+
+  * Add warnings if skipping updates
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 05 Oct 2023 13:55:36 +0100
+
+piwiz (0.63) bookworm; urgency=medium
+
+  * Don't set entire welcome URL in wizard
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 25 Sep 2023 15:00:57 +0100
+
+piwiz (0.62) bookworm; urgency=medium
+
+  * Fix default browser setting
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 13 Sep 2023 08:46:00 +0100
+
+piwiz (0.61) bookworm; urgency=medium
+
+  * Always read serial numbers from /proc/cpuinfo
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 06 Sep 2023 14:20:06 +0100
+
+piwiz (0.60) bookworm; urgency=medium
+
+  * Add setting of serial to Firefox start page
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 05 Sep 2023 08:58:30 +0100
+
+piwiz (0.59) bookworm; urgency=medium
+
+  * Show browser select after successful wifi connection
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 30 Aug 2023 13:18:18 +0100
+
+piwiz (0.58) bookworm; urgency=medium
+
+  * Add permission to remove software
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 30 Aug 2023 07:01:19 +0100
+
+piwiz (0.57) bookworm; urgency=medium
+
+  * Remove overscan
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 29 Aug 2023 10:28:53 +0100
+
+piwiz (0.56) bookworm; urgency=medium
+
+  * Add browser selection
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 25 Aug 2023 10:34:16 +0100
+
+piwiz (0.55) bookworm; urgency=medium
+
+  * Use pre-1970 time zone database
+  * Fix accented character in language name
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 16 Aug 2023 07:18:14 +0100
+
+piwiz (0.54) bookworm; urgency=medium
+
+  * Add polkit rule to allow clock resync
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 28 Jul 2023 15:17:43 +0100
+
+piwiz (0.53) bookworm; urgency=medium
+
+  * Set volume to 100% at startup
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 28 Jul 2023 10:03:16 +0100
+
+piwiz (0.52) bookworm; urgency=medium
+
+  * De-sudo GUI
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 26 Jul 2023 11:56:08 +0100
+
+piwiz (0.51) bookworm; urgency=medium
+
+  * Set ownership correctly for user wayfire config file
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 03 Jul 2023 11:11:20 +0100
+
+piwiz (0.50) bookworm; urgency=medium
+
+  * Modifications to initial wayfire keyboard configuration
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 28 Jun 2023 07:50:43 +0100
+
+piwiz (0.49) bookworm; urgency=medium
+
+  * Don't override keyboard with English override
+  * Remove dhcpcd code
+  * Start network scan earlier
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 12 Jun 2023 08:43:37 +0100
+
+piwiz (0.48) bookworm; urgency=medium
+
+  * Add message while waiting for reboot
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 30 May 2023 08:58:22 +0100
+
+piwiz (0.47) bookworm; urgency=medium
+
+  * Added Korean translation
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 05 Apr 2023 11:50:01 +0100
+
+piwiz (0.46) bookworm; urgency=medium
+
+  * Make Wayland keyboard settings as well as X
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 15 Mar 2023 09:57:11 +0000
+
+piwiz (0.45) bookworm; urgency=medium
+
+  * Remove pre and post install scripts
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 21 Feb 2023 14:18:34 +0000
+
+piwiz (0.44) bookworm; urgency=medium
+
+  * Modify for bookworm and wayfire
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 20 Feb 2023 09:11:00 +0000
+
+piwiz (0.43) bullseye; urgency=medium
+
+  * Fix wi-fi test
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 06 Sep 2022 09:11:37 +0100
+
+piwiz (0.42) bullseye; urgency=medium
+
+  * Network Manager support
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 21 Jul 2022 10:42:51 +0100
+
+piwiz (0.41) bullseye; urgency=medium
+
+  * Do not allow 'root' as a user name
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 23 Jun 2022 17:22:18 +0100
+
+piwiz (0.40) bullseye; urgency=medium
+
+  * Updated Italian translation
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 19 Apr 2022 10:40:17 +0100
+
+piwiz (0.39) bullseye; urgency=medium
+
+  * Add user creation
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 02 Mar 2022 12:09:30 +0000
+
+piwiz (0.38) bullseye; urgency=medium
+
+  * Tidy homeschool Chromium shortcuts
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 11 Jan 2022 12:39:16 +0000
+
+piwiz (0.37) bullseye; urgency=medium
+
+  * Fix audio output selection when dual HDMI audio devices are in use
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 08 Dec 2021 12:04:50 +0000
+
+piwiz (0.36) bullseye; urgency=medium
+
+  * Modify audio output selection code to handle new format device names
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 07 Dec 2021 14:29:21 +0000
+
+piwiz (0.35) bullseye; urgency=medium
+
+  * Add some more keyboard definitions
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 01 Dec 2021 17:53:05 +0000
+
+piwiz (0.34) bullseye; urgency=medium
+
+  * Spawn screen reader prompt rather than using system
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 04 Nov 2021 16:15:33 +0000
+
+piwiz (0.33) bullseye; urgency=medium
+
+  * Add detection of HDMI audio device on Pi 1 / 2 / 3
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 28 Oct 2021 11:57:52 +0100
+
+piwiz (0.32) bullseye; urgency=medium
+
+  * Italian translation updated
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 08 Oct 2021 09:16:26 +0100
+
+piwiz (0.31) bullseye; urgency=medium
+
+  * Change sense of overscan check
+
+ -- Simon Long <simon@raspberrypi.com>  Sat, 02 Oct 2021 13:09:59 +0100
+
+piwiz (0.30) bullseye; urgency=medium
+
+  * Check reboot flag set by install process
+
+ -- Simon Long <simon@raspberrypi.com>  Sun, 12 Sep 2021 14:07:17 +0100
+
+piwiz (0.29) bullseye; urgency=medium
+
+  * Various fixes to locale and timezone settings
+
+ -- Simon Long <simon@raspberrypi.com>  Sat, 07 Aug 2021 17:15:44 +0100
+
+piwiz (0.28) bullseye; urgency=medium
+
+  * Make audio compatible with KMS
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 14 Jul 2021 13:02:28 +0100
+
+piwiz (0.27) bullseye; urgency=medium
+
+  * Restore accessibility labels that Glade decided to remove...
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 16 Jun 2021 16:17:11 +0100
+
+piwiz (0.26) bullseye; urgency=medium
+
+  * Install additional Japanese fonts
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 28 May 2021 21:18:22 +0900
+
+piwiz (0.25) bullseye; urgency=medium
+
+  * Added Armenian translation
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 26 Apr 2021 09:58:29 +0100
+
+piwiz (0.24) bullseye; urgency=medium
+
+  * GTK+3 version
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 26 Mar 2021 14:18:37 +0000
+
+piwiz (0.23) buster; urgency=medium
+
+  * Fix reading of Pi 400 keyboard code
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 24 Feb 2021 13:15:29 +0000
+
+piwiz (0.22) buster; urgency=medium
+
+  * Set correct audio output when first run
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 06 Jan 2021 10:53:52 +0000
+
+piwiz (0.21) buster; urgency=medium
+
+  * Fix incorrect user for respawned process after locale change
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 09 Dec 2020 18:00:17 +0000
+
+piwiz (0.20) buster; urgency=medium
+
+  * Update translations
+  * Only install autostart file on new installation
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 07 Dec 2020 08:43:39 +0000
+
+piwiz (0.19) buster; urgency=medium
+
+  * Add relaunch after localisation has been set to load translations
+  * Add environment preservation flag to enable screen reader support
+  * Add screen reader install voice prompt
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 14 Oct 2020 15:23:27 +0100
+
+piwiz (0.18) buster; urgency=medium
+
+  * Re-set marketing serial number in Chromium preferences after update
+
+ -- Simon Long <simon@raspberrypi.com>  Sat, 01 Aug 2020 11:52:19 +0100
+
+piwiz (0.17) buster; urgency=medium
+
+  * Filter out 64-bit packages on x86; fix some leaked memory
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 28 Jul 2020 10:25:27 +0100
+
+piwiz (0.16) buster; urgency=medium
+
+  * Create separate standard and homeschool packages
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 09 Jun 2020 17:13:14 +0100
+
+piwiz (0.15) buster; urgency=medium
+
+  * When installing language packages, ignore armhf version if there is arm64 version
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 03 Jun 2020 22:29:18 +0800
+
+piwiz (0.14) buster; urgency=medium
+
+  * Text tweak
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 02 Jun 2020 11:27:52 +0100
+
+piwiz (0.13) buster; urgency=medium
+
+  * Check multiple locations for Chromium preferences
+
+ -- Simon Long <simon@raspberrypi.com>  Mon, 01 Jun 2020 12:22:55 +0100
+
+piwiz (0.12) buster; urgency=medium
+
+  * Set serial number in marketing page for Chromium.
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 23 Apr 2020 15:56:25 +0100
+
+piwiz (0.11) buster; urgency=medium
+
+  * Use size_t in all getline calls
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 28 Feb 2020 06:36:29 +0000
+
+piwiz (0.10) buster; urgency=medium
+
+  * Detect Pi or x86 at runtime rather than compilation
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 27 Feb 2020 07:53:31 +0000
+
+piwiz (0.9) buster; urgency=medium
+
+  * Add compatibility with ntpd for x86
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 11 Feb 2020 15:26:02 +0000
+
+piwiz (0.8) buster; urgency=medium
+
+  * Check that clock is synced before attempting update
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 25 Oct 2019 11:14:30 +0100
+
+piwiz (0.7) buster; urgency=medium
+
+  * Show overscan page when using FKMS
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 23 Sep 2019 09:43:48 +0100
+
+piwiz (0.6) buster; urgency=medium
+
+  * Fix parsing of LANGUAGE string in /etc/default/locale
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 09 Sep 2019 13:28:38 +0100
+
+piwiz (0.5) unstable; urgency=medium
+
+  * Don't offer overscan page when using GL driver
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 16 May 2019 08:09:46 +0100
+
+piwiz (0.4) unstable; urgency=medium
+
+  * Use raspi-config to set wifi country; prevent language override from changing wifi country
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 30 Apr 2019 13:09:36 +0100
+
+piwiz (0.3) stretch; urgency=medium
+
+  * Add underscan screen; auto detect Pi keyboards
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 19 Feb 2019 08:40:06 +0000
+
+piwiz (0.2) stretch; urgency=medium
+
+  * Add keyboard database and US keyboard override option
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 06 Jul 2018 09:45:27 +0100
+
+piwiz (0.1) stretch; urgency=low
+
+  * Initial release
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 26 Apr 2018 07:56:25 +0100

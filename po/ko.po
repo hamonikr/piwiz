@@ -1,0 +1,547 @@
+# English translations for piwiz package.
+# Copyright (C) 2019 Raspberry Pi Ltd
+# Copyright (C) 2024 HamoniKR
+# This file is distributed under the same license as the piwiz package.
+# Simon Long <simon@raspberrypi.org>, 2019.
+# Kevin Kim <chaeya@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: piwiz 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-16 19:49+0900\n"
+"PO-Revision-Date: 2023-03-18 10:56+0900\n"
+"Last-Translator: Yi Yunseok <ironyunseok@protonmail.com>\n"
+"Language-Team: English (British)\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: ../src/piwiz.c:1117 ../src/piwiz.c:1540
+msgid "Searching for networks - please wait..."
+msgstr "네트워크를 찾는 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1137
+msgid "Failed to connect to network."
+msgstr "네트워크 연결에 실패했습니다."
+
+#: ../src/piwiz.c:1324
+
+msgid "Failed to connect - access point not available."
+msgstr "네트워크 연결에 실패했습니다."
+
+#: ../src/piwiz.c:1566
+msgid "Downloading updates - please wait..."
+msgstr "업데이트를 내려받는 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1568
+msgid "Installing updates - please wait..."
+msgstr "업데이트 설치 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1574 ../src/piwiz.c:1669 ../src/piwiz.c:1768
+
+msgid "Downloading languages - please wait..."
+msgstr "업데이트를 내려받는 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1576
+msgid "Installing languages - please wait..."
+msgstr "언어팩 설치 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1582 ../src/piwiz.c:1682 ../src/piwiz.c:1796
+
+msgid "Uninstalling browser - please wait..."
+msgstr "업데이트 설치 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1690 ../src/piwiz.c:1824
+msgid "Getting updates - please wait..."
+msgstr "업데이트를 가져오는 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1705 ../src/piwiz.c:1715
+#, c-format
+msgid "Error %s - %s"
+msgstr ""
+
+#: ../src/piwiz.c:1734
+
+msgid "checking for updates"
+msgstr ""
+"업데이트 확인 중 오류가 발생했습니다.\n"
+"%s"
+
+#: ../src/piwiz.c:1742 ../src/piwiz.c:1782
+
+msgid "installing languages"
+msgstr ""
+"언어팩 설치 중 오류가 발생했습니다.\n"
+"%s"
+
+#: ../src/piwiz.c:1788 ../src/piwiz.c:1810
+msgid "uninstalling browser"
+msgstr ""
+
+#: ../src/piwiz.c:1816 ../src/piwiz.c:1844
+
+msgid "getting updates"
+msgstr ""
+"업데이트를 가져오던 중 오류가 발생했습니다.\n"
+"%s"
+
+#: ../src/piwiz.c:1835 ../src/piwiz.c:1852
+msgid "System is up to date"
+msgstr "시스템이 최신 상태입니다"
+
+#: ../src/piwiz.c:1884 ../src/piwiz.c:2212
+msgid "Checking for updates - please wait..."
+msgstr "업데이트 확인 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:1893
+msgid "Could not sync time - unable to check for updates"
+msgstr "시간 동기화 불가능 - 업데이트를 확인할 수 없음"
+
+#: ../src/piwiz.c:1923 ../data/piwiz.ui.h:72
+msgid "_Next"
+msgstr "다음(_N)"
+
+#: ../src/piwiz.c:1924
+msgid "_Back"
+msgstr "이전(_B)"
+
+#: ../src/piwiz.c:1925 ../data/piwiz.ui.h:71
+msgid "_Skip"
+msgstr "넘기기(_S)"
+
+#: ../src/piwiz.c:1936
+msgid "<b>Rename User</b>"
+msgstr "<b>사용자 이름 바꾸기</b>"
+
+#: ../src/piwiz.c:1937
+#, c-format
+msgid ""
+"Your current user '%s' will be renamed.\n"
+"\n"
+"The new username can only contain lower-case letters, digits and hyphens, "
+"and must start with a letter."
+msgstr ""
+"현재 사용자 '%s'의 이름이 변경됩니다.\n"
+"\n"
+"새 사용자 이름은 소문자, 숫자 및 하이픈만 포함할 수 있으며, 반드시 문자로 시"
+"작해야 합니다."
+
+#: ../src/piwiz.c:1940
+msgid "Press 'Next' to rename the user."
+msgstr "사용자 이름을 바꾸려면 '다음'을 누르세요."
+
+#: ../src/piwiz.c:1941 ../data/piwiz.ui.h:70
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: ../src/piwiz.c:1949
+msgid "_Restart"
+msgstr "재시작(_R)"
+
+#: ../src/piwiz.c:1952
+msgid "<b>User Renamed</b>"
+msgstr "<b>사용자 이름이 변경됨</b>"
+
+#: ../src/piwiz.c:1953
+#, c-format
+msgid "The '%s' user has been renamed to '%s' and the new password set."
+msgstr "'%s' 사용자의 이름을 '%s'로 바꾸고 새 암호를 설정했습니다."
+
+#: ../src/piwiz.c:1956
+msgid "Press 'Restart' to reboot and login as the new user."
+msgstr "'재시작'을 누르고 재부팅해 새 사용자로 로그인하세요."
+
+#: ../src/piwiz.c:1962
+msgid "_Done"
+msgstr "완료(_D)"
+
+#: ../src/piwiz.c:2089
+msgid "Setting location - please wait..."
+msgstr "위치 설정 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:2108
+msgid "The username is blank."
+msgstr "사용자 이름을 입력하세요."
+
+#: ../src/piwiz.c:2113
+msgid "The username must be 32 characters or shorter."
+msgstr "사용자 이름은 32자 이하로 설정하세요."
+
+#: ../src/piwiz.c:2118
+msgid "The first character of the username must be a lower-case letter."
+msgstr "사용자 이름의 첫 번째 문자는 소문자로 설정하세요."
+
+#: ../src/piwiz.c:2123 ../src/piwiz.c:2128
+msgid ""
+"This username is used by the system and cannot be used for a user account."
+msgstr ""
+"이 사용자 이름은 시스템에서 사용되므로 사용자 계정에 사용할 수 없습니다."
+
+#: ../src/piwiz.c:2137
+msgid "Usernames can only contain lower-case letters, digits and hyphens."
+msgstr "사용자 이름에는 소문자, 숫자 및 하이픈만 사용할 수 있습니다."
+
+#: ../src/piwiz.c:2142
+msgid "The password is blank."
+msgstr "비밀번호를 입력하세요."
+
+#: ../src/piwiz.c:2147
+msgid "The two passwords entered do not match."
+msgstr "입력한 두 개의 비밀번호가 일치하지 않습니다."
+
+#: ../src/piwiz.c:2152
+msgid ""
+"You have used a known default value for the username or password.\n"
+"\n"
+"We strongly recommend you go back and choose something else."
+msgstr ""
+"사용자 이름 또는 비밀번호에 알려진 기본값을 사용했습니다.\n"
+"\n"
+"다른 것을 선택하는 것을 권장합니다."
+
+#: ../src/piwiz.c:2171
+#, c-format
+msgid "Enter the password for the WiFi network \"%s\"."
+msgstr "WiFi 네트워크 \"%s\"의 비밀번호를 입력하세요."
+
+#: ../src/piwiz.c:2181 ../src/piwiz.c:2189
+msgid "Connecting to WiFi network - please wait..."
+msgstr "WiFi 네트워크 연결 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:2217
+msgid "Synchronising clock - please wait..."
+msgstr "시간 동기화 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:2222
+msgid "No network connection found - unable to check for updates"
+msgstr "네트워크 연결을 찾을 수 없음 - 업데이트를 확인할 수 없음"
+
+#: ../src/piwiz.c:2226
+
+msgid "Restarting - please wait..."
+msgstr "업데이트를 가져오는 중 - 잠시만 기다려주세요..."
+
+#: ../src/piwiz.c:2265
+msgid ""
+"If installing updates is skipped, translation files will not be installed, "
+"and the unused browser will not be uninstalled."
+msgstr "업데이트를 안하면 번역 파일이 설치되지 않고"
+"사용하지 않는 브라우저가 제거되지 않습니다."
+
+#: ../src/piwiz.c:2267
+msgid ""
+"If installing updates is skipped, translation files will not be installed."
+msgstr "업데이트를 안하면 번역 파일이 설치되지 않습니다."
+
+#: ../src/piwiz.c:2269
+msgid ""
+"If installing updates is skipped, the unused browser will not be uninstalled."
+msgstr "업데이트를 안하면 사용하지 않는 브라우저가 제거되지 않습니다."
+
+#: ../src/piwiz.c:2321
+#, c-format
+msgid "<span font_desc=\"10.0\">IP : %s</span>"
+msgstr "<span font_desc=\"10.0\">IP : %s</span>"
+
+#: ../data/piwiz.ui.h:1
+msgid "_OK"
+msgstr "확인(_O)"
+
+#: ../data/piwiz.ui.h:2
+
+msgid "Welcome to HamoniKR"
+msgstr "환영 인사"
+
+#: ../data/piwiz.ui.h:3
+
+msgid ""
+"Welcome to HamoniKR!\n"
+"\n"
+"Before you start using it, there are a few things to set up.\n"
+"\n"
+"Press 'Next' to get started. "
+msgstr ""
+"하모니카 데스크톱에 오신 것을 환영합니다!\n"
+"\n"
+"시작하기 전에, 몇 가지 설정이 필요합니다.\n"
+"\n"
+"'다음'을 눌러 시작하세요. "
+
+#: ../data/piwiz.ui.h:8
+msgid ""
+"If you are using a Bluetooth keyboard or mouse, put them into pairing mode "
+"and wait for them to connect."
+msgstr ""
+"블루투스 키보드 또는 마우스를 사용하는 경우 페어링 모드로 전환하고 연결될 때"
+"까지 기다려주세요."
+
+#: ../data/piwiz.ui.h:9
+msgid "<span font_desc=\"10.0\"> </span>"
+msgstr "<span font_desc=\"10.0\"> </span>"
+
+#: ../data/piwiz.ui.h:10
+msgid "<b>Set Country</b>"
+msgstr "<b>국가 설정</b>"
+
+#: ../data/piwiz.ui.h:11
+msgid ""
+"Enter the details of your location. This is used to set the language, time "
+"zone, keyboard and other international settings."
+msgstr ""
+"위치 세부 정보를 입력합니다. 언어, 시간대, 자판 및 기타 국제 설정에 사용됩니"
+"다."
+
+#: ../data/piwiz.ui.h:12
+msgid "Country:"
+msgstr "국가:"
+
+#: ../data/piwiz.ui.h:13
+msgid "Set the country in which you are using your Pi"
+msgstr "사용하는 국가를 설정"
+
+#: ../data/piwiz.ui.h:14
+msgid "Language:"
+msgstr "언어:"
+
+#: ../data/piwiz.ui.h:15
+msgid "Set the language in which applications should appear"
+msgstr "애플리케이션에 표시할 언어 설정"
+
+#: ../data/piwiz.ui.h:16
+msgid "Timezone:"
+msgstr "시간대:"
+
+#: ../data/piwiz.ui.h:17
+msgid "Set the closest city to your location"
+msgstr "사용자 위치에서 가장 가까운 도시 설정"
+
+#: ../data/piwiz.ui.h:18
+msgid "Use US keyboard"
+msgstr "US 키보드 사용"
+
+#: ../data/piwiz.ui.h:19
+msgid ""
+"Use the US keyboard layout instead of the default keyboard for your country"
+msgstr "사용자 국가 기본 자판 대신 US 키보드 레이아웃 사용"
+
+#: ../data/piwiz.ui.h:20
+msgid "Use English language"
+msgstr "영어 사용"
+
+#: ../data/piwiz.ui.h:21
+msgid "Use English instead of the default language for your country"
+msgstr "사용자 국가 언어 대신 영어 사용"
+
+#: ../data/piwiz.ui.h:22
+msgid "Press 'Next' when you have made your selection."
+msgstr "선택을 완료하고 '다음'을 누르세요."
+
+#: ../data/piwiz.ui.h:23
+msgid "<b>Create User</b>"
+msgstr "<b>사용자 생성</b>"
+
+#: ../data/piwiz.ui.h:24
+
+msgid ""
+"You need to create a user account to log in to your System.\n"
+"\n"
+"The username can only contain lower-case letters, digits and hyphens, and "
+"must start with a letter."
+msgstr ""
+"시스템에 로그인할 사용자 이름을 생성해야 합니다.\n"
+"\n"
+"사용자 이름에는 소문자, 숫자 및 하이픈만 사용할 수 있으며, 문자로 시작해야 합"
+"니다."
+
+#: ../data/piwiz.ui.h:27
+msgid "Enter password:"
+msgstr "비밀번호 입력:"
+
+#: ../data/piwiz.ui.h:28
+msgid "Confirm password:"
+msgstr "비밀번호 확인:"
+
+#: ../data/piwiz.ui.h:29
+msgid "Enter username:"
+msgstr "사용자 이름 입력:"
+
+#: ../data/piwiz.ui.h:30
+msgid "Enter a password"
+msgstr "비밀번호 입력"
+
+#: ../data/piwiz.ui.h:31
+msgid "Enter the password again"
+msgstr "비밀번호 재입력"
+
+#: ../data/piwiz.ui.h:32
+msgid "Enter a username"
+msgstr "사용자 이름 입력"
+
+#: ../data/piwiz.ui.h:33
+msgid "Hide characters"
+msgstr "글자 가리기"
+
+#: ../data/piwiz.ui.h:34
+msgid "Show or hide the characters in your password"
+msgstr "비밀번호를 가리거나 표시"
+
+#: ../data/piwiz.ui.h:35
+msgid "Press 'Next' to create your account."
+msgstr "'다음'을 눌러 사용자 계정을 생성합니다."
+
+#: ../data/piwiz.ui.h:36
+msgid "<b>Set Up Screen</b>"
+msgstr "<b>화면 설정</b>"
+
+#: ../data/piwiz.ui.h:37
+msgid ""
+"On some monitors, the desktop is larger than the screen and the edges are "
+"cut off. You can adjust this here."
+msgstr ""
+"일부 모니터에서는 데스크톱이 화면보다 크고 가장자리가 잘립니다. 여기에서 조정"
+"할 수 있습니다."
+
+#: ../data/piwiz.ui.h:38
+msgid "Reduce the size of the desktop on this monitor"
+msgstr "이 모니터에서 화면 크기 축소"
+
+#: ../data/piwiz.ui.h:39
+msgid "Turn on to shrink the desktop to fit the monitor"
+msgstr "화면을 모니터에 맞게 축소"
+
+#: ../data/piwiz.ui.h:40
+msgid "Reduce the size of the desktop on the second monitor"
+msgstr "보조 모니터에서 화면 크기 축소"
+
+#: ../data/piwiz.ui.h:41
+msgid "Turn on to shrink the desktop to fit the second monitor"
+msgstr "보조 모니터 화면을 모니터에 맞게 축소"
+
+#: ../data/piwiz.ui.h:42
+msgid "Press 'Next' when the screen looks correct."
+msgstr "화면이 제대로 보이면 '다음'을 누르세요."
+
+#: ../data/piwiz.ui.h:43
+msgid "<b>Select WiFi Network</b>"
+msgstr "<b>WiFi 네트워크 선택</b>"
+
+#: ../data/piwiz.ui.h:44
+msgid "Select your WiFi network from the list."
+msgstr "목록에서 WiFi 네트워크를 선택하세요."
+
+#: ../data/piwiz.ui.h:45
+msgid "Click the name of your network to select it"
+msgstr "네트워크 이름을 눌러 선택"
+
+#: ../data/piwiz.ui.h:46
+msgid "Press 'Next' to connect, or 'Skip' to continue without connecting."
+msgstr "연결하려면 '다음'을, 연결하지 않고 계속하려면 '넘기기'를 누르세요."
+
+#: ../data/piwiz.ui.h:47
+msgid "<b>Enter WiFi Password</b>"
+msgstr "<b>WiFi 비밀번호 입력</b>"
+
+#: ../data/piwiz.ui.h:48
+msgid "Enter the password for your WiFi network."
+msgstr "WiFi 네트워크의 비밀번호를 입력하세요."
+
+#: ../data/piwiz.ui.h:49
+msgid "Password:"
+msgstr "비밀번호:"
+
+#: ../data/piwiz.ui.h:50
+msgid "Enter the password for your network"
+msgstr "네트워크 비밀번호 입력"
+
+#: ../data/piwiz.ui.h:51
+
+msgid "<b>Choose Browser</b>"
+msgstr "<b>브라우저 선택</b>"
+
+#: ../data/piwiz.ui.h:52
+msgid ""
+"Both the Chromium and Firefox web browsers are preinstalled on OS. Select "
+"the one you prefer to use."
+msgstr "Chromium and Firefox 웹브라우저가 설치되어 있습니다"
+"기본 브라우저를 선택하세요."
+
+#: ../data/piwiz.ui.h:53
+msgid "Default Browser:"
+msgstr "기본 브라우저:"
+
+#: ../data/piwiz.ui.h:54
+msgid "Chromium"
+msgstr ""
+
+#: ../data/piwiz.ui.h:55
+msgid "Firefox"
+msgstr ""
+
+#: ../data/piwiz.ui.h:56
+msgid "Tick here to uninstall the unused browser"
+msgstr "사용하지 않는 브라우저를 제거"
+
+#: ../data/piwiz.ui.h:57
+
+msgid "Press 'Next' when you have chosen a browser."
+msgstr "선택을 완료하고 '다음'을 누르세요."
+
+#: ../data/piwiz.ui.h:58
+msgid "<b>Enable Raspberry Pi Connect</b>"
+msgstr "<b>라즈베리 파이 연결 서비스 설정</b>"
+
+#: ../data/piwiz.ui.h:59
+msgid ""
+"Raspberry Pi Connect is a service which allows you to securely remotely "
+"access your Raspberry Pi's desktop from any computer."
+msgstr "라즈베리 파이 연결은 어디에서나 안전하게"
+"시스템에 원격접속이 가능하게 지원하는 서비스입니다."
+
+#: ../data/piwiz.ui.h:60
+msgid "Enable Raspberry Pi Connect"
+msgstr "라즈베리 파이 연결 사용"
+
+#: ../data/piwiz.ui.h:61
+msgid "Turn on to allow remote access"
+msgstr "원격 접속을 허용하세요"
+
+#: ../data/piwiz.ui.h:62
+
+msgid "Press 'Next' when you have made your choice."
+msgstr "선택을 완료하고 '다음'을 누르세요."
+
+#: ../data/piwiz.ui.h:63
+msgid "<b>Update Software</b>"
+msgstr "<b>소프트웨어 업데이트</b>"
+
+#: ../data/piwiz.ui.h:64
+msgid ""
+"The operating system and applications will now be checked and updated if "
+"necessary. This may involve a large download.\n"
+"\n"
+"Press 'Next' to check and update software, or 'Skip' to continue without "
+"checking."
+msgstr ""
+"운영체제와 애플리케이션의 업데이트를 확인합니다. 대용량의 업데이트가 필요할 수 있"
+"습니다.\n"
+"\n"
+"업데이트를 확인하려면 '다음'을, 확인하지 않고 넘기려면 '넘기기'를 누르세요."
+
+#: ../data/piwiz.ui.h:67
+msgid "<b>Setup Complete</b>"
+msgstr "<b>설정 완료</b>"
+
+#: ../data/piwiz.ui.h:68
+
+msgid "Your System is now set up and ready to go."
+msgstr "시스템을 사용할 준비가 됐습니다."
+
+#: ../data/piwiz.ui.h:69
+
+msgid ""
+"Press 'Restart' to restart your System so the new settings will take effect."
+msgstr "'재시작'을 눌러 설정을 적용하세요."
