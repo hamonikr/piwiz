@@ -495,7 +495,7 @@ Press 'Next' to get started. </property>
                   <object class="GtkLabel" id="p2title">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Create User&lt;/b&gt;</property>
+                    <property name="label" translatable="yes">&lt;b&gt;Change User Password&lt;/b&gt;</property>
                     <property name="use-markup">True</property>
                     <property name="max-width-chars">50</property>
                     <property name="xalign">0</property>
@@ -510,9 +510,7 @@ Press 'Next' to get started. </property>
                   <object class="GtkLabel" id="p2info">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="label" translatable="yes">You need to create a user account to log in to your System.
-
-The username can only contain lower-case letters, digits and hyphens, and must start with a letter.</property>
+                    <property name="label" translatable="yes">You need to change user password to log in to your System.</property>
                     <property name="wrap">True</property>
                     <property name="max-width-chars">50</property>
                     <property name="xalign">0</property>
@@ -627,7 +625,7 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                   <object class="GtkLabel" id="p2prompt">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="label" translatable="yes">Press 'Next' to create your account.</property>
+                    <property name="label" translatable="yes">Press 'Next' to change your password.</property>
                     <property name="wrap">True</property>
                     <property name="max-width-chars">50</property>
                     <property name="xalign">0</property>
