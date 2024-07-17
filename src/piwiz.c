@@ -1910,26 +1910,25 @@ static gpointer final_setup (gpointer ptr)
     int res;
     gboolean error_occurred = FALSE;
 
-    // copy the wayfire config file for the new user
-    if (!chuser) {
-        res = vsystem ("sudo mkdir -p /home/%s/.config/; sudo chown %s:%s /home/%s/.config/; sudo cp /home/rpi-first-boot-wizard/.config/wayfire.ini /home/%s/.config/wayfire.ini; sudo chown %s:%s /home/%s/.config/wayfire.ini",
-            init_user, init_user, init_user, init_user, init_user, init_user, init_user, init_user);
-        if (res != 0) {
-            fprintf(log_file, "Failed to copy wayfire config file for the new user\n");
-            error_occurred = TRUE;
-        }
-    }
+    // 디버깅을 위해 변수 값을 출력
+    // fprintf(log_file, "init_user: %s\n", init_user ? init_user : "NULL");
+    // fprintf(log_file, "user: %s\n", user ? user : "NULL");
+    // fprintf(log_file, "pw: %s\n", pw ? pw : "NULL");
 
-    // rename the pi user to the new user and set the password
-    res = vsystem ("sudo /usr/lib/userconf-pi/userconf %s %s '%s'", chuser ? chuser : init_user, user, pw);
+    // 현재 사용자의 비밀번호를 변경.
+    char cmd[256];
+    snprintf(cmd, sizeof(cmd), "sudo usermod --password '%s' %s", pw, init_user);
+    res = system(cmd);
     if (res != 0) {
-        fprintf(log_file, "Failed to rename the pi user to the new user and set the password\n");
+        fprintf(log_file, "Failed to change password for user %s\n", init_user);
         error_occurred = TRUE;
+    } else {
+        fprintf(log_file, "Password successfully changed for user %s\n", init_user);
     }
 
-    // set an autostart to set HDMI audio on reboot as new user
+    // HDMI 오디오 설정을 위한 autostart 설정
     if (chuser == NULL) {
-        res = vsystem ("echo \"[Desktop Entry]\nType=Application\nName=Select HDMI Audio\nExec=sh -c '/usr/bin/hdmi-audio-select; sudo rm /etc/xdg/autostart/hdmiaudio.desktop'\" | sudo tee /etc/xdg/autostart/hdmiaudio.desktop", user);
+        res = vsystem ("echo \"[Desktop Entry]\nType=Application\nName=Select HDMI Audio\nExec=sh -c '/usr/bin/hdmi-audio-select; sudo rm /etc/xdg/autostart/hdmiaudio.desktop'\" | sudo tee /etc/xdg/autostart/hdmiaudio.desktop");
         if (res != 0) {
             fprintf(log_file, "Failed to set HDMI audio on reboot as new user\n");
             error_occurred = TRUE;
@@ -1947,6 +1946,7 @@ static gpointer final_setup (gpointer ptr)
     fclose(log_file);
     return NULL;
 }
+
 
 /* Page management */
 
@@ -2135,41 +2135,41 @@ static void next_page (GtkButton* btn, gpointer ptr)
                                 g_free (pw);
                                 pw = NULL;
                             }
-                            ccptr = gtk_entry_get_text (GTK_ENTRY (user_te));
-                            if (!strlen (ccptr))
-                            {
-                                message (_("The username is blank."), MSG_PROMPT);
-                                break;
-                            }
-                            if (strlen (ccptr) > 32)
-                            {
-                                message (_("The username must be 32 characters or shorter."), MSG_PROMPT);
-                                break;
-                            }
-                            if (*ccptr < 'a' || *ccptr > 'z')
-                            {
-                                message (_("The first character of the username must be a lower-case letter."), MSG_PROMPT);
-                                break;
-                            }
-                            if (!g_strcmp0 (gtk_entry_get_text (GTK_ENTRY (user_te)), "rpi-first-boot-wizard"))
-                            {
-                                message (_("This username is used by the system and cannot be used for a user account."), MSG_PROMPT);
-                                break;
-                            }
-                            if (!g_strcmp0 (gtk_entry_get_text (GTK_ENTRY (user_te)), "root"))
-                            {
-                                message (_("This username is used by the system and cannot be used for a user account."), MSG_PROMPT);
-                                break;
-                            }
-                            while (*++ccptr)
-                            {
-                                if ((*ccptr < 'a' || *ccptr > 'z') && (*ccptr < '0' || *ccptr > '9') && *ccptr != '-') break;
-                            }
-                            if (*ccptr)
-                            {
-                                message (_("Usernames can only contain lower-case letters, digits and hyphens."), MSG_PROMPT);
-                                break;
-                            }
+                            // ccptr = gtk_entry_get_text (GTK_ENTRY (user_te));
+                            // if (!strlen (ccptr))
+                            // {
+                            //     message (_("The username is blank."), MSG_PROMPT);
+                            //     break;
+                            // }
+                            // if (strlen (ccptr) > 32)
+                            // {
+                            //     message (_("The username must be 32 characters or shorter."), MSG_PROMPT);
+                            //     break;
+                            // }
+                            // if (*ccptr < 'a' || *ccptr > 'z')
+                            // {
+                            //     message (_("The first character of the username must be a lower-case letter."), MSG_PROMPT);
+                            //     break;
+                            // }
+                            // if (!g_strcmp0 (gtk_entry_get_text (GTK_ENTRY (user_te)), "rpi-first-boot-wizard"))
+                            // {
+                            //     message (_("This username is used by the system and cannot be used for a user account."), MSG_PROMPT);
+                            //     break;
+                            // }
+                            // if (!g_strcmp0 (gtk_entry_get_text (GTK_ENTRY (user_te)), "root"))
+                            // {
+                            //     message (_("This username is used by the system and cannot be used for a user account."), MSG_PROMPT);
+                            //     break;
+                            // }
+                            // while (*++ccptr)
+                            // {
+                            //     if ((*ccptr < 'a' || *ccptr > 'z') && (*ccptr < '0' || *ccptr > '9') && *ccptr != '-') break;
+                            // }
+                            // if (*ccptr)
+                            // {
+                            //     message (_("Usernames can only contain lower-case letters, digits and hyphens."), MSG_PROMPT);
+                            //     break;
+                            // }
                             if (!strlen (gtk_entry_get_text (GTK_ENTRY (pwd1_te))) || !strlen (gtk_entry_get_text (GTK_ENTRY (pwd2_te))))
                             {
                                 message (_("The password is blank."), MSG_PROMPT);
@@ -2509,7 +2509,7 @@ int main (int argc, char *argv[])
 
     bt_prompt = (GtkWidget *) gtk_builder_get_object (builder, "p0prompt");
     ip_label = (GtkWidget *) gtk_builder_get_object (builder, "p0ip");
-    user_te = (GtkWidget *) gtk_builder_get_object (builder, "p2user");
+    // user_te = (GtkWidget *) gtk_builder_get_object (builder, "p2user");
     pwd1_te = (GtkWidget *) gtk_builder_get_object (builder, "p2pwd1");
     pwd2_te = (GtkWidget *) gtk_builder_get_object (builder, "p2pwd2");
     psk_te = (GtkWidget *) gtk_builder_get_object (builder, "p4psk");

@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkSizeGroup"/>
   <object class="GtkWindow" id="error">
     <property name="name">pixbox</property>
     <property name="can-focus">False</property>
@@ -524,7 +525,7 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                   </packing>
                 </child>
                 <child>
-                  <!-- n-columns=2 n-rows=3 -->
+                  <!-- n-columns=2 n-rows=2 -->
                   <object class="GtkGrid" id="p2grid">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
@@ -532,13 +533,14 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                       <object class="GtkLabel" id="p2label1">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="margin-bottom">5</property>
                         <property name="hexpand">True</property>
                         <property name="label" translatable="yes">Enter password:</property>
                         <property name="xalign">0</property>
                       </object>
                       <packing>
                         <property name="left-attach">0</property>
-                        <property name="top-attach">1</property>
+                        <property name="top-attach">0</property>
                       </packing>
                     </child>
                     <child>
@@ -551,20 +553,7 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                       </object>
                       <packing>
                         <property name="left-attach">0</property>
-                        <property name="top-attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="p2label3">
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                        <property name="hexpand">True</property>
-                        <property name="label" translatable="yes">Enter username:</property>
-                        <property name="xalign">0</property>
-                      </object>
-                      <packing>
-                        <property name="left-attach">0</property>
-                        <property name="top-attach">0</property>
+                        <property name="top-attach">1</property>
                       </packing>
                     </child>
                     <child>
@@ -572,6 +561,7 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="tooltip-text" translatable="yes">Enter a password</property>
+                        <property name="margin-bottom">5</property>
                         <property name="invisible-char">•</property>
                         <property name="activates-default">True</property>
                         <accessibility>
@@ -580,7 +570,7 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                       </object>
                       <packing>
                         <property name="left-attach">1</property>
-                        <property name="top-attach">1</property>
+                        <property name="top-attach">0</property>
                       </packing>
                     </child>
                     <child>
@@ -596,21 +586,7 @@ The username can only contain lower-case letters, digits and hyphens, and must s
                       </object>
                       <packing>
                         <property name="left-attach">1</property>
-                        <property name="top-attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkEntry" id="p2user">
-                        <property name="visible">True</property>
-                        <property name="can-focus">True</property>
-                        <property name="tooltip-text" translatable="yes">Enter a username</property>
-                        <accessibility>
-                          <relation type="labelled-by" target="p2label3"/>
-                        </accessibility>
-                      </object>
-                      <packing>
-                        <property name="left-attach">1</property>
-                        <property name="top-attach">0</property>
+                        <property name="top-attach">1</property>
                       </packing>
                     </child>
                   </object>
@@ -1444,16 +1420,5 @@ Press 'Next' to check and update software, or 'Skip' to continue without checkin
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkSizeGroup">
-    <widgets>
-      <widget name="p1comb1"/>
-      <widget name="p1comb2"/>
-      <widget name="p1comb3"/>
-      <widget name="p2pwd1"/>
-      <widget name="p2pwd2"/>
-      <widget name="p2user"/>
-      <widget name="p4psk"/>
-    </widgets>
   </object>
 </interface>
