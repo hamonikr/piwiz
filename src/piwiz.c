@@ -1939,6 +1939,13 @@ static gpointer final_setup (gpointer ptr)
         fprintf(log_file, "Errors occurred during setup, not rebooting\n");
     } else if (reboot) {
         fprintf(log_file, "Rebooting system\n");
+
+        // Run cancel-rename command with user id
+        vsystem ("sudo /usr/bin/cancel-rename %s", init_user);
+
+        // remove custom polikit rule after finish jobs
+        vsystem ("sudo rm -f /usr/share/polkit-1/rules.d/10-piwiz.rules");
+      
         vsystem ("sync; sudo reboot");
     }
 

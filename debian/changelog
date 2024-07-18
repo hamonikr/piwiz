@@ -1,3 +1,10 @@
+piwiz (1.0.1) bookworm; urgency=medium
+
+  * Add feature
+   - Remove custom polikit rule after finish jobs
+
+ -- Kevin Kim <chaeya@gmail.com>  Thu, 18 Jul 2024 19:43:50 +0900
+
 piwiz (1.0.0) bookworm; urgency=medium
 
   * Release for HamoniKR
