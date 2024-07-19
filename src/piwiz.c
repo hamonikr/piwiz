@@ -1901,58 +1901,56 @@ static gboolean ntp_check (gpointer data)
 
 static gpointer final_setup (gpointer ptr)
 {
-    FILE *log_file = fopen("/var/log/final_setup.log", "a");
-    if (log_file == NULL) {
-        perror("Failed to open log file");
-        return NULL;
-    }
 
     int res;
     gboolean error_occurred = FALSE;
-
-    // 디버깅을 위해 변수 값을 출력
-    // fprintf(log_file, "init_user: %s\n", init_user ? init_user : "NULL");
-    // fprintf(log_file, "user: %s\n", user ? user : "NULL");
-    // fprintf(log_file, "pw: %s\n", pw ? pw : "NULL");
 
     // 현재 사용자의 비밀번호를 변경.
     char cmd[256];
     snprintf(cmd, sizeof(cmd), "sudo usermod --password '%s' %s", pw, init_user);
     res = system(cmd);
     if (res != 0) {
-        fprintf(log_file, "Failed to change password for user %s\n", init_user);
+        printf("Failed to change password for user %s\n", init_user);
         error_occurred = TRUE;
     } else {
-        fprintf(log_file, "Password successfully changed for user %s\n", init_user);
+        printf("Password successfully changed for user %s\n", init_user);
     }
 
     // HDMI 오디오 설정을 위한 autostart 설정
     if (chuser == NULL) {
         res = vsystem ("echo \"[Desktop Entry]\nType=Application\nName=Select HDMI Audio\nExec=sh -c '/usr/bin/hdmi-audio-select; sudo rm /etc/xdg/autostart/hdmiaudio.desktop'\" | sudo tee /etc/xdg/autostart/hdmiaudio.desktop");
         if (res != 0) {
-            fprintf(log_file, "Failed to set HDMI audio on reboot as new user\n");
+            printf("Failed to set HDMI audio on reboot as new user\n");
             error_occurred = TRUE;
         }
     }
 
     if (error_occurred) {
-        fprintf(log_file, "Errors occurred during setup, not rebooting\n");
+        printf("Errors occurred during setup, not rebooting\n");
     } else if (reboot) {
-        fprintf(log_file, "Rebooting system\n");
+        printf("Rebooting system\n");
 
         // Run cancel-rename command with user id
         vsystem ("sudo /usr/bin/cancel-rename %s", init_user);
+        if (res != 0) {
+            printf("Failed to set cancel-rename %s\n", init_user);
+            error_occurred = TRUE;
+        }        
 
         // remove custom polikit rule after finish jobs
         vsystem ("sudo rm -f /usr/share/polkit-1/rules.d/10-piwiz.rules");
+        if (res != 0) {
+            printf("Failed to remove /usr/share/polkit-1/rules.d/10-piwiz.rules\n");
+            error_occurred = TRUE;
+        }        
       
         vsystem ("sync; sudo reboot");
     }
 
     gtk_main_quit ();
-    fclose(log_file);
     return NULL;
 }
+
 
 
 /* Page management */
