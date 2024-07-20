@@ -1942,8 +1942,15 @@ static gpointer final_setup (gpointer ptr)
         if (res != 0) {
             printf("Failed to remove /usr/share/polkit-1/rules.d/10-piwiz.rules\n");
             error_occurred = TRUE;
-        }        
-      
+        }
+
+        // Enable hamonike welcome screen after finish jobs
+        vsystem ("sudo rm -f /home/%s/.hamonikr/hamonikrwelcome/norun.flag", init_user);
+        if (res != 0) {
+            printf("Failed to remove /home/%s/.hamonikr/hamonikrwelcome/norun.flag\n", init_user);
+            error_occurred = TRUE;
+        }
+
         vsystem ("sync; sudo reboot");
     }
 

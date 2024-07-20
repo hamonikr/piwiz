@@ -1,3 +1,10 @@
+piwiz (1.0.3) bookworm; urgency=medium
+
+  * Release for HamoniKR OS
+   - Changed enable welcome screen  #1
+
+ -- Kevin Kim <chaeya@gmail.com>  Sat, 20 Jul 2024 23:22:24 +0900
+
 piwiz (1.0.2) bookworm; urgency=medium
 
   * Release for HamoniKR OS
