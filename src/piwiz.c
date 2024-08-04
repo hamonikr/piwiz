@@ -1651,26 +1651,29 @@ static void next_update (PkTask *task, update_type update_stage)
     switch (update_stage)
     {
         case INSTALL_LANGUAGES:
-            buf = g_strdup_printf ("check-language-support -l %s_%s", lc, cc);
-            lpack = get_shell_string (buf, TRUE);
-            g_free (buf);
+            // lc가 ko인 경우를 제외하고 lpack을 설정
+            if (g_strcmp0 (lc, "ko") != 0) {        
+                buf = g_strdup_printf ("check-language-support -l %s_%s", lc, cc);
+                lpack = get_shell_string (buf, TRUE);
+                g_free (buf);
 
-            if (!g_strcmp0 (lc, "ja"))
-            {
-                tmp = g_strdup_printf ("%s%s%s", JAPAN_FONTS, lpack ? " " : "", lpack);
-                g_free (lpack);
-                lpack = tmp;
-            }
+                if (!g_strcmp0 (lc, "ja"))
+                {
+                    tmp = g_strdup_printf ("%s%s%s", JAPAN_FONTS, lpack ? " " : "", lpack);
+                    g_free (lpack);
+                    lpack = tmp;
+                }
 
-            if (lpack)
-            {
-                pack_array = g_strsplit (lpack, " ", -1);
+                if (lpack)
+                {
+                    pack_array = g_strsplit (lpack, " ", -1);
 
-                thread_message (_("Downloading languages - please wait..."), MSG_PULSE);
-                pk_client_resolve_async (PK_CLIENT (task), 0, pack_array, NULL, (PkProgressCallback) progress, NULL, (GAsyncReadyCallback) resolve_lang_done, NULL);
-                g_strfreev (pack_array);
-                g_free (lpack);
-                break;
+                    thread_message (_("Downloading languages - please wait..."), MSG_PULSE);
+                    pk_client_resolve_async (PK_CLIENT (task), 0, pack_array, NULL, (PkProgressCallback) progress, NULL, (GAsyncReadyCallback) resolve_lang_done, NULL);
+                    g_strfreev (pack_array);
+                    g_free (lpack);
+                    break;
+                }
             }
 
         case UNINSTALL_BROWSER:
@@ -2306,13 +2309,14 @@ static void skip_page (GtkButton* btn, gpointer ptr)
         case PAGE_UPDATE :  gchar *buf = g_strdup_printf ("check-language-support -l %s_%s", lc, cc);
                             gchar *lpack = get_shell_string (buf, TRUE);
                             gboolean uninst = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (uninstall_chk));
-                            if (lpack && uninst)
-                                message (_("If installing updates is skipped, translation files will not be installed, and the unused browser will not be uninstalled."), MSG_TERM);
-                            else if (lpack)
-                                message (_("If installing updates is skipped, translation files will not be installed."), MSG_TERM);
-                            else if (uninst)
-                                message (_("If installing updates is skipped, the unused browser will not be uninstalled."), MSG_TERM);
-                            else change_page (FORWARD);
+                            // if (lpack && uninst)
+                            //     message (_("If installing updates is skipped, translation files will not be installed, and the unused browser will not be uninstalled."), MSG_TERM);
+                            // else if (lpack)
+                            //     message (_("If installing updates is skipped, translation files will not be installed."), MSG_TERM);
+                            // else if (uninst)
+                            //     message (_("If installing updates is skipped, the unused browser will not be uninstalled."), MSG_TERM);
+                            // else change_page (FORWARD);
+                            change_page (FORWARD);
                             g_free (buf);
                             g_free (lpack);
                             break;
